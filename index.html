@@ -1,0 +1,92 @@
+<!doctype html>
+
+<html lang="en">
+ <head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+   <script src="https://code.jquery.com/jquery.js"></script>
+   
+
+ </head>
+
+    <!-- center everything with html[+], simple h1 in a container (maybe with rounded edges) 
+    br next line(s), create series of divs to be polulated with javascript 
+    disappear the divs when user hits done, or time runs out-->
+
+
+    <body align="center">
+
+     <!-- create centered contianer that everything will be in -->
+        <div id="container">
+            <h1 class="title">Trivia Game</h1>
+            <br>
+                <!-- this div was created to 'hold' the questions in, and for the javascript to 
+                'disappear' later to display our results -->
+                <div id="disappearingQuestions">
+                    <div id="timer"></div>
+                    <br>
+                    <!-- These divs will be populated by javascript -->
+                    <div id="question1"></div>
+                    <br>
+                    <div id="question2"></div>
+                    <br>
+                    <div id="question3"></div>
+                    <br>
+                    <div id="question4"></div>
+                    <br>
+                    <div id="question5"></div>
+                    <br>
+                    <div id="question6"></div>
+                    <br>
+                    <div id="question7"></div>
+                    <br>
+                    <div id="question8"></div>
+                    <br>
+                </div>
+        </div>
+
+
+
+
+
+
+    <style>
+    
+    </style>
+<!-- the script below will hold the right and wrong answer values to be called on later -->
+    <script>
+        var counter = 0;
+        console.log(counter)
+
+        var counter2 = 0;
+
+        function count1() {
+
+            $("#rightanswer").click(function(){
+                counter++;
+            });
+        };
+
+
+        function count2() {
+
+            $("#wronganswer").click(function(){
+                counter2++;
+            });
+        };
+
+        // count1();
+        // count2();
+
+    </script>
+
+     
+       
+     <script src="https://code.jquery.com/jquery.js"></script>
+     <script type="text/javascript" src="assets/javascript/timerAndFinalScore.js"></script>
+     <script type="text/javascript" src="assets/javascript/questions.js"></script>
+     <!-- <script type="text/javascript" src="assets/javascript/finalScore.js"></script> -->
+     
+     
+    </body>
+</html>

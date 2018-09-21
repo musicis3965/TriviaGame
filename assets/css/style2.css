@@ -1,0 +1,34 @@
+/* this is the container in the back of the page, that houses the questions and at the end, the results */
+/* questions */
+#container1 {
+    background-color: yellow;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    border-radius: 25px;
+    position: absolute;
+    z-index: 4;
+
+}
+
+/* results */
+#container2 {
+    background-color: yellow;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    border-radius: 25px;
+    position: absolute;
+    z-index: 3;
+    padding-bottom: 15em;
+    
+}
+
+.btn:focus{
+    background: blue;
+}
+
+
+.title {
+    color: blue;
+}
