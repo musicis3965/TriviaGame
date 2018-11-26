@@ -1,24 +1,22 @@
 <!doctype html>
-
 <html lang="en">
  <head>
    <meta charset="utf-8">
    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-   <script src="https://code.jquery.com/jquery.js"></script>
-   
-
+   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
  </head>
+
+
+
 
     <!-- center everything with html[+], simple h1 in a container (maybe with rounded edges) 
     br next line(s), create series of divs to be polulated with javascript 
     disappear the divs when user hits done, or time runs out-->
 
-
-    <body align="center">
-
+<body align="center">
      <!-- create centered contianer that everything will be in -->
-        <div id="container">
-            <h1 class="title">Trivia Game</h1>
+    <div id="container">
+        <h1 class="title">Trivia Game</h1>
             <br>
                 <!-- this div was created to 'hold' the questions in, and for the javascript to 
                 'disappear' later to display our results -->
@@ -43,50 +41,33 @@
                     <div id="question8"></div>
                     <br>
                 </div>
-        </div>
+    </div>
 
 
 
 
 
 
-    <style>
     
-    </style>
-<!-- the script below will hold the right and wrong answer values to be called on later -->
-    <script>
-        var counter = 0;
-        console.log(counter)
+     
+            
+        
 
-        var counter2 = 0;
-
-        function count1() {
-
-            $("#rightanswer").click(function(){
-                counter++;
-            });
-        };
-
-
-        function count2() {
-
-            $("#wronganswer").click(function(){
-                counter2++;
-            });
-        };
-
-        // count1();
-        // count2();
-
-    </script>
+           
 
      
        
-     <script src="https://code.jquery.com/jquery.js"></script>
-     <script type="text/javascript" src="assets/javascript/timerAndFinalScore.js"></script>
-     <script type="text/javascript" src="assets/javascript/questions.js"></script>
-     <!-- <script type="text/javascript" src="assets/javascript/finalScore.js"></script> -->
-     
-     
-    </body>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+    <script type="text/javascript" src="assets/javascript/timerAndFinalScore.js"></script>
+    <script type="text/javascript" src="assets/javascript/questions.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+
+    
+</body>
 </html>
+
+
+<!-- try it with a radio button html form -->

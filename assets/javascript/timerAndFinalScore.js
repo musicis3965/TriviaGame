@@ -14,14 +14,17 @@ var timerId = setInterval(countdown, 1000);
 // This calls the countdown function to start when the page loads, but pretty sure it was running without this for some reason 
 window.onload = countdown();
 // This is the function that makes the countdown code work, writing the final score part in html.
+
+
+
 function countdown() {
   if (timeLeft == 0) {
     document.getElementById("disappearingQuestions").innerHTML = 
     // remember CA is correct answer, and WA is Incorrect Answer
 "<h1> All done!</h1> <br> <p>Correct Answers:</p> <div id='CA'></div> <br> <p>Incorrect Answers:</p> <div id='WA'></div>"
 ;
-    $("#CA").text(counter);
-    $("#WA").text(counter);
+    $("#CA").text(rightAnswer);
+    $("#WA").text(wrongAnswer);
 
   } else {
     elem.innerHTML = timeLeft;

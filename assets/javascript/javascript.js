@@ -1,12 +1,10 @@
 // loading the qu
 document.getElementById("timer").innerHTML = 
-"<h1> Time left: <div id='time'></div></h1>" 
-;
-
-
+"<h1> Time left: <div id='time'></div></h1>";
+   
 // This is the timer!! When timer hits 0, it should disappear, along with the questions
 // This is the countdown code -----------------------------------------------------
-var timeLeft = 10;
+var timeLeft = 30;
 var elem = document.getElementById('time');
 
 var timerId = setInterval(countdown, 1000);
@@ -17,6 +15,8 @@ window.onload = countdown();
 function countdown() {
   if (timeLeft == 0) {
     $("#container2").css("z-index", 5);
+    $("#container1").html("");
+
     
     // remember CA is correct answer, and WA is Incorrect Answer
 

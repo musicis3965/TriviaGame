@@ -1,10 +1,15 @@
 <!doctype html>
 
+
+
 <html lang="en">
  <head>
    <meta charset="utf-8">
    <link rel="stylesheet" type="text/css" href="assets/css/style2.css">
-   <script src="https://code.jquery.com/jquery.js"></script>
+   <link rel="stylesheet" type="text/css" href="assets/that-70s-font/webfontkit-20180926-161252/stylesheet.css">
+   <title>That '70s Trivia</title>
+   
+
    
 
  </head>
@@ -12,13 +17,26 @@
     <!-- center everything with html[+], simple h1 in a container (maybe with rounded edges) 
     br next line(s), create series of divs to be polulated with javascript 
     disappear the divs when user hits done, or time runs out-->
+<body>
+
+
+
+
+
+    
+
+
+  <div class="jumbotron jumbotron-fluid"> 
+
 
 
     <body align="center">
 
      <!-- create centered contianer that everything will be in -->
         <div id="container1">
-            <h1 class="title">Trivia Game</h1>
+            <h1 class="title" style="font-size: 75px; text-shadow: 8px 5px 5px black; 
+            font-family: 'bocklinregular', Arial, sans-serif;
+            color: yellow;">That '70s Trivia</h1>
             <br>
                 <!-- this div was created to 'hold' the questions in, and for the javascript to 
                 'disappear' later to display our results -->
@@ -28,17 +46,25 @@
                     
                     <div id="question1"></div>
                     <br>
-                    <p> this would be question 1 </p> <br> <button class="btn" id="rightanswer">Option 1</button><button class="btn" id="wronganswer">Option 2</button>
-                    <button class="btn" id="wronganswer">Option 3</button><button class="btn" id="wronganswer">Option 4</button>
+                    <p class="ques"> What is Donna's sister's name? </p> <br> <input type="Button" class='AddButton' value="Tina" /><input type="Button" class='AddButton2' value="Beverley" />
+                    <input type="Button" class='AddButton2' value="Ruth" /><input type="Button" class='AddButton2' value="Trick Question: She doesn't have a sister" />
                     <div id="question2"></div>
                     <br>
-                    <p> this would be question 2 </p> <br> <button class="btn" id="rightanswer">Option 1</button><button class="btn" id="wronganswer">Option 2</button>
-                    <button class="btn" id="wronganswer">Option 3</button><button class="btn" id="wronganswer">Option 4</button>
+                    <p class="ques"> Topher Grace (Eric) was considered a 'regular' cast- <br> member on the show for how many seasons? </p> <br> <input type="Button" class='AddButton' value="7" /><input type="Button" class='AddButton2' value="6" />
+                    <input type="Button" class='AddButton2' value="8" /><input type="Button" class='AddButton2' value="5" />
                     <div id="question3"></div>
                     <br>
-                    <p> this would be question 3 </p> <br> <button class="btn" id="wronganswer">Option 1</button><button class="btn" id="wronganswer">Option 2</button>
-                    <button class="btn" id="rightanswer">Option 3</button><button class="btn" id="wronganswer">Option 4</button>
+                    <p class="ques"> What does 'Fez' stand for? </p> <br> <input type="Button" class='AddButton2' value="Fredrick Eiesen Zander" /><input type="Button" class='AddButton2' value="Farley Ell Zest" />
+                    <input type="Button" class='AddButton' value="Foreign Exchange Student" /><input type="Button" class='AddButton2' value="Nothing" />
                     <div id="question4"></div>
+                    <br>
+                    <p class="ques"> Mila Kunis was how old when she <br>auditioned for the role of 'Jackie'? </p> <br> <input type="Button" class='AddButton2' value="15" /><input type="Button" class='AddButton2' value="16" />
+                    <input type="Button" class='AddButton' value="14" /><input type="Button" class='AddButton2' value="13" />
+                    <div id="question5"></div>
+                    <br>
+                    <p class="ques"> Brooke Sheilds plays which character <br> on the show? </p> <br> <input type="Button" class='AddButton' value="Pam" /><input type="Button" class='AddButton2' value="Stacey" />
+                    <input type="Button" class='AddButton2' value="Susie" /><input type="Button" class='AddButton2' value="Linda" />
+                    <div id="question6"></div>
                     <br>
                    
                 </div>
@@ -46,49 +72,67 @@
 
     
         <div id="container2">
-                <h1 class="title">Trivia Game</h1>
+                <h1 class="title" style="text-shadow: 8px 5px 5px black; 
+            font-family: 'bocklinregular', Arial, sans-serif;
+            color: yellow;">RESULTS!!</h1>
                 <br>
                 <h1> All done!</h1> <br> 
                 <p>Correct Answers:</p> 
-                <div id='CA'></div> <br> 
+                <input type="text" name="TextBox" class="TextBox" value="0" /><br> 
                 <p>Incorrect Answers:</p> 
-                <div id='WA'></div>
+                <input type="text" name="TextBox2" class="TextBox2" value="0" />
+            </div>
         </div>
-     
+<!-- experimental code here -->
 
 
-        <script>
-            var counter = 0;
-            var counter2 = 0;
-            console.log(counter);
+<!-- <input type="Button" id='AddButton' value="+" />
+
+<input type="Button" class='AddButton2' value="+" /> -->
+
+
+
+<!-- experimental code end -->
+ <div class="bg-image"></div>
+
+   
+ <script src="https://code.jquery.com/jquery.js"></script>
+ <script>
+
+  // experimental code start
+
+ $(document).ready(function(){
+        //var counter = $('#TextBox').val();
+        $('.AddButton').click(function() {
+            var counter = $('.TextBox').val();
+            counter++ ;
+            $('.TextBox').val(counter);
+        });
+        $('.AddButton2').click(function() {
+            var counter2 = $('.TextBox2').val();
+            counter2++ ;
+            $('.TextBox2').val(counter2);
+        });
     
-            $(document).ready(function() {
-
-            $("#rightanswer").click(function(){
-            counter++;
-
-            $("#CA").text(counter);
-                });
-
-            });
+    
+    
+    
+    
+    });
 
 
-           $(document).ready(function() {
+   
 
-            $("#wronganswer").click(function(){
-            counter2++;
 
-            $("#WA").text(counter2);
-                });
 
-             });
-            
-            
-        </script>
-       
-     <script src="https://code.jquery.com/jquery.js"></script>
-     
-     <script type="text/javascript" src="assets/javascript/javascript.js"></script>
-     
-    </body>
+  // experimental code end
+
+
+    
+ 
+ </script>
+ 
+ <script type="text/javascript" src="assets/javascript/javascript.js"></script>
+ 
+</body>
 </html>
